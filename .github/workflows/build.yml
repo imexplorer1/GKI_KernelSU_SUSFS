@@ -814,6 +814,7 @@ jobs:
         run: cp "$DEFCONFIG" "$DEFCONFIG.orig"
 
       - name: 注入NTsync内核配置
+        if: inputs.droidspaces_ntsync
         run: |
             cd "$KERNEL_ROOT"
             cd ./common
